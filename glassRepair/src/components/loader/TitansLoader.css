@@ -1,0 +1,48 @@
+/* Definición de la animación de pulso */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.6;
+    stroke-width: 3; /* Grosor normal de línea */
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 4.5; /* Ligeramente más grueso al pulsar */
+  }
+  100% {
+    opacity: 0.6;
+    stroke-width: 3;
+  }
+}
+
+/* Estilo para el contenedor del loader */
+.titans-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ejemplo para centrar en toda la pantalla */
+  width: 100vw;
+  background-color: #D2B48C; /* El color de fondo camel/café */
+}
+
+/* Estilo base para el SVG */
+.titans-helmet-svg {
+  width: 150px; /* Tamaño del loader */
+  height: auto;
+}
+
+/* Aplicar la animación al contorno */
+.helmet-outline {
+  fill: none; /* Asegura que solo se vea el trazo */
+  stroke: #C0C0C0; /* Color gris/plateado */
+  stroke-linejoin: round;
+  animation: pulseGlow 1.5s infinite ease-in-out; /* Aplica la animación */
+}
+
+/* Estilo para el cuerpo y texto (opcional) */
+.helmet-body {
+    fill: #000000;
+}
+
+.titans-text {
+    /* Aquí podrías añadir otra animación de parpadeo */
+}
