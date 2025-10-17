@@ -1,120 +1,42 @@
-/* Variables de la Paleta de Colores de Titans Autoglass */
-:root {
-    --color-background-dark: #3a251c; /* Marrón muy oscuro */
-    --color-background-light: #ab6e4a; /* Marrón-Naranja Terroso (Fondo principal) */
-    --color-accent-text: #ffffff; /* Blanco/Gris Muy Claro */
-    --color-dark-text: #000000; /* Negro */
-    --color-border: #6e4428; /* Borde oscuro */
-    /* Fuente: Usar una fuente que se asemeje a la "stencil" o "blocky" de la imagen. */
-    --font-primary: 'Impact', 'Arial Black', sans-serif; 
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Estilos Globales */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-background-dark);
-    color: var(--color-accent-text);
-    font-family: var(--font-primary);
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.App {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Header (Navegación) */
-.header {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 3px solid var(--color-background-light);
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.logo-text {
-    font-size: 2.5em;
-    color: var(--color-accent-text);
-    text-shadow: 2px 2px var(--color-dark-text);
+.card {
+  padding: 2em;
 }
 
-/* Hero Section (Contenido Principal) */
-.hero-section {
-    width: 100%;
-    max-width: 1200px;
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.service-list-card {
-    background-color: var(--color-background-light);
-    color: var(--color-dark-text);
-    padding: 25px;
-    border: 5px solid var(--color-border);
-    box-shadow: 10px 10px 0 var(--color-dark-text); /* Efecto de borde grueso */
-    text-align: center;
-    width: 400px;
-}
-
-.service-list-card h3 {
-    color: var(--color-dark-text);
-    font-size: 2.5em;
-    text-shadow: 1px 1px var(--color-accent-text);
-    margin-bottom: 20px;
-}
-
-.details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    text-align: left;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed var(--color-border);
-}
-
-.small-heading {
-    font-size: 0.8em;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-}
-
-.language-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0;
-}
-
-.service-item {
-    font-size: 1.2em;
-    margin: 5px 0;
-    font-weight: 500;
-}
-
-.phone-number {
-    font-size: 3em;
-    font-weight: bold;
-    color: var(--color-dark-text);
-    margin: 15px 0;
-    line-height: 1;
-}
-
-.qr-placeholder {
-    height: 120px;
-    width: 120px;
-    background-color: var(--color-dark-text); /* Placeholder */
-    margin: 10px auto;
-    /* En un sitio real, usarías <img> */
-}
-
-.card-footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 15px;
+.read-the-docs {
+  color: #888;
 }
